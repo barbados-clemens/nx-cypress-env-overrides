@@ -1,13 +1,8 @@
-import { getGreeting } from '../support/app.po';
-
-describe('ng-one', () => {
-  beforeEach(() => cy.visit('/'));
-
-  it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
-
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome to ng-one!');
+// create a test spec containing this
+describe('When reading the MY_VAR env variable', () => {
+  it('should match the value in our cypress.env.json file: ' + Cypress.env('MY_VAR'), () => {
+    cy.log('MY_VAR = ' + Cypress.env('MY_VAR'))
+    expect(Cypress.env('MY_VAR')).to.eq('xyz');
   });
 });
+
