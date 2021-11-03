@@ -33,6 +33,13 @@
     "ng-one-e2e": {
       "tags": [],
       "implicitDependencies": ["ng-one"]
+    },
+    "ng-two": {
+      "tags": []
+    },
+    "ng-two-e2e": {
+      "tags": [],
+      "implicitDependencies": ["ng-two"]
     }
   }
 }
